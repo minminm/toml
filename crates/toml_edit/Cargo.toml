@@ -1,15 +1,12 @@
 [package]
 name = "toml_edit"
+edition = "2021"
 version = "0.19.15"
 keywords = ["encoding", "toml"]
 categories = ["encoding", "parser-implementations", "parsing", "config"]
 description = "Yet another format-preserving TOML parser."
 authors = ["Andronik Ordian <write@reusable.software>", "Ed Page <eopage@gmail.com>"]
-repository.workspace = true
-license.workspace = true
-edition.workspace = true
-rust-version.workspace = true
-include.workspace = true
+license = "GPL-3.0-or-later OR Apache-2.0"
 
 [package.metadata.docs.rs]
 features = ["serde"]
@@ -37,7 +34,7 @@ serde = ["dep:serde", "toml_datetime/serde", "dep:serde_spanned"]
 unbounded = []
 
 [dependencies]
-indexmap = { version = "2.0.0", features = ["std"] }
+indexmap = { version = "1.9.1" }
 winnow = "0.5.0"
 serde = { version = "1.0.145", optional = true }
 kstring = { version = "2.0.0", features = ["max_inline"], optional = true }
